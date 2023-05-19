@@ -29,7 +29,7 @@ const items = ref([
   },
   {
     name: '性别',
-    value: userStore.sex,
+    value: userStore.sex === 1 ? '男' : '女',
   },
   {
     name: '班级',
