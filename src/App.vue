@@ -16,7 +16,7 @@ const title = ref('');
 const isShowBar = ref(true);
 getUserInfo(getAccount())
   .then(data => {
-    console.log(data)
+    console.log(data);
     userStore.setUserInfo(data);
   })
   .catch(err => {
@@ -27,6 +27,7 @@ getUserInfo(getAccount())
 watch(router.currentRoute, to => {
   active.value = to.name;
   title.value = to.meta.nav;
+  isShowBar.value = to.meta.showBar;
 });
 
 const replacePath = path => {
